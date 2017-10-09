@@ -2,10 +2,14 @@ import React, {Component} from 'react';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ApplyIcon from 'material-ui/svg-icons/content/send';
+import _ from 'lodash';
 
 import FilterItem from './FilterItem';
 
 const Filter = ({title, label, items, onCheck, onSend}) => {
+
+    const isDisabled = _.isEmpty(_.find(items, ({checked}) => checked === true));
+
     return (
         <div style={{flexGrow: 1, flexShrink: 1, flexBasis: '50%'}}>
             <Card initiallyExpanded={true} style={{margin: '0 5px 10px 5px'}}>
@@ -20,7 +24,10 @@ const Filter = ({title, label, items, onCheck, onSend}) => {
                     />
                 </CardText>
                 <CardActions expandable={true}>
-                    <FloatingActionButton mini={true} onClick={() => onSend(label)}>
+                    <FloatingActionButton
+                            mini={true}
+                            onClick={() => onSend(label)}
+                            disabled={isDisabled}>
                         <ApplyIcon />
                     </FloatingActionButton>
                 </CardActions>

@@ -18,10 +18,10 @@ const App = () => {
             <Row>
                 <Panel title="CUSTOMER WEB APP">
                     <Row>
-                        <Panel title="Filters" className="col-lg-4">
+                        <Panel title="Filters" className="col-lg-4 col-md-4 col-sm-6 col-xs-6">
                             <FilterManagement/>
                         </Panel>
-                        <Panel title="GDC Dashboard" className="col-lg-8">
+                        <Panel title="Embedded GDC Dashboard" className="col-lg-8 col-md-8 col-sm-6 col-xs-6">
                             <iframe id="gooddata"
                                     frameBorder="0"
                                     src="https://localhost:8443/dashboard.html?label.stage.name.stagename=vals=Short List,Negotiation#project=/gdc/projects/w8gtg6cwkygunvf59pd3amlij0i8nvx6&dashboard=/gdc/md/w8gtg6cwkygunvf59pd3amlij0i8nvx6/obj/76191"

@@ -69,6 +69,7 @@ class FilterManagement extends Component {
                 message = _data.gdc;
 
             if (message.name === MESSAGE_NAME && message.type === MESSAGE_TYPE) {
+                console.log(message);
                 this.updateFilter(message.data);
             }
         }
