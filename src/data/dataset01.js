@@ -1,4 +1,5 @@
 export default {
+    embeddedUrl: 'https://localhost:8443/dashboard.html?label.stage.name.stagename=Short List#project=/gdc/projects/w8gtg6cwkygunvf59pd3amlij0i8nvx6&dashboard=/gdc/md/w8gtg6cwkygunvf59pd3amlij0i8nvx6/obj/76191',
     filters: [
         {
             title: 'Stage Name',

@@ -1,8 +1,6 @@
 import React, {Component} from "react";
-import {Card, CardActions, CardHeader, CardText} from "material-ui/Card";
 import _ from 'lodash';
 import Filter from "./Filter";
-import data from "../data";
 
 const MESSAGE_NAME = 'filter.value.changed',
       MESSAGE_TYPE = 'app.ok';
@@ -12,7 +10,7 @@ class FilterManagement extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            filters: data.filters
+            filters: props.filters
         };
     }
 
