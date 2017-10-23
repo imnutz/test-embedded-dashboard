@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import _ from 'lodash';
+import _ from "lodash";
 import Filter from "./Filter";
 
 const MESSAGE_NAME = 'filter.value.changed',
@@ -76,26 +76,24 @@ class FilterManagement extends Component {
     updateFilter = data => {
         !_.isEmpty(data) &&
         this.setState(prevState => {
-
-            const label = data[0].label;
-            const values = data.map(({value}) => value);
+            let filters = prevState.filters.map(filter => {
+                let items = filter.items.map(item => {
+                    let isExist = data.find(datum => datum.label === filter.label && datum.value === item.value);
+                    return {
+                        ...item,
+                        checked: !!isExist
+                    }
+                });
+                return {
+                    ...filter,
+                    items
+                };
+            });
 
             return {
-                filters: prevState.filters.map((filter) => {
-                    return label !== filter.label ?
-                        filter :
-                        {
-                            ...filter,
-                            items: filter.items.map(item => {
-                                return values.findIndex(value => item.value === value) >= 0  ?
-                                {...item, checked: true} :
-                                {...item, checked: false}
-                            })
-                        }
-                })
+                filters
             }
-        })
-
+        });
     };
 
     render () {
