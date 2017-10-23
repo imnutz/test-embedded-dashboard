@@ -1,5 +1,5 @@
 export default {
-    embeddedUrl: 'https://client-demo.na.intgdc.com:50010/dashboard.html#project=/gdc/projects/sln8e8dwp3l3341nw3qgczgt07ivokol&dashboard=/gdc/md/sln8e8dwp3l3341nw3qgczgt07ivokol/obj/75559',
+    embeddedUrl: 'https://localhost:8443/dashboard.html#project=/gdc/projects/sln8e8dwp3l3341nw3qgczgt07ivokol&dashboard=/gdc/md/sln8e8dwp3l3341nw3qgczgt07ivokol/obj/75559',
     filters: [
         {
             title: 'Sale Rep',
@@ -89,6 +89,17 @@ export default {
             ]
         },
         {
+            title: 'Activity',
+            label: "label.activity.id.subject",
+            items: [
+                {value: "Email with 1000Bulbs.com on Apr-21-08"},
+                {value: "Email with 1000Bulbs.com on Dec-14-09"},
+                {value: "Email with 1000Bulbs.com on Dec-29-08"},
+                {value: "Email with 1000Bulbs.com on Feb-10-09"},
+                {value: "Email with 1000Bulbs.com on Jan-06-10"}
+            ]
+        }/*,
+        {
             title: 'Not Real Filter',
             label: 'abc',
             items: [
@@ -102,7 +113,7 @@ export default {
                     value: 'Not Existed'
                 }
             ]
-        }
+        }*/
     ]
 };
 

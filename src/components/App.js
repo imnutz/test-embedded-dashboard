@@ -8,14 +8,20 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Row from './Row';
 import Panel from './Panel';
 import FilterManagement from './FilterManagement';
+
+/* IMPORT DATASET HERE */
 import dataset01 from '../data/dataset01';
 import dataset02 from '../data/dataset02';
+/* ... */
 
 injectTapEventPlugin();
 
 const App = () => {
 
+    /******************SELECT IMPORTED DATASET TO TEST*************/
+    // const dataSet = dataset01;
     const dataSet = dataset02;
+    /**************************************************************/
 
     return (
         <MuiThemeProvider>
@@ -41,7 +47,5 @@ const App = () => {
     );
 };
 
-/*src="https://localhost:8443/dashboard.html?label.stage.name.stagename=vals=Short List,Negotiation#project=/gdc/projects/w8gtg6cwkygunvf59pd3amlij0i8nvx6&dashboard=/gdc/md/w8gtg6cwkygunvf59pd3amlij0i8nvx6/obj/76191"*/
-/*src="https://localhost:8443/dashboard.html?snapshot.aag81lMifn6q=2011#project=/gdc/projects/w8gtg6cwkygunvf59pd3amlij0i8nvx6&dashboard=/gdc/md/w8gtg6cwkygunvf59pd3amlij0i8nvx6/obj/76191&tab=95bc951f809b"*/
 export default App;
 
