@@ -13,3 +13,11 @@
     border: 1px rgb(0, 188, 212) solid;
 
 }
+
+.address {
+    display: flex;
+    justify-content: space-between;
+}
+.address div:first-of-type {
+    flex: 0 0 90%;
+}
