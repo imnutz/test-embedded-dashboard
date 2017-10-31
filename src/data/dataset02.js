@@ -1,5 +1,5 @@
 export default {
-    embeddedUrl: 'https://localhost:8443/dashboard.html#project=/gdc/projects/sln8e8dwp3l3341nw3qgczgt07ivokol&dashboard=/gdc/md/sln8e8dwp3l3341nw3qgczgt07ivokol/obj/75559',
+    embeddedUrl: '',
     filters: [
         {
             title: 'Sale Rep',

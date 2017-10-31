@@ -8,6 +8,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Row from './Row';
 import Panel from './Panel';
 import FilterManagement from './FilterManagement';
+import IFramePanel from './IFramePanel';
 
 /* IMPORT DATASET HERE */
 import dataset01 from '../data/dataset01';
@@ -29,17 +30,10 @@ const App = () => {
                 <Panel title="CUSTOMER WEB APP">
                     <Row>
                         <Panel title="Filters" className="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <FilterManagement filters={dataSet.filters}/>
+                            <FilterManagement filters={dataSet.filters} embeddedUrl={dataSet.embeddedUrl} />
                         </Panel>
-                        <Panel title="Embedded GDC Dashboard" className="col-lg-8 col-md-8 col-sm-6 col-xs-6">
-                            <iframe id="gooddata"
-                                    frameBorder="0"
-                                    src={dataSet.embeddedUrl}
-                                    width="100%"
-                                    height="620px"
-                                    allowTransparency="false">
-                            </iframe>
-                        </Panel>
+
+                        <IFramePanel embeddedUrl={dataSet.embeddedUrl} />
                     </Row>
                 </Panel>
             </Row>
