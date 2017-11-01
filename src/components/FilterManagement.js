@@ -20,6 +20,12 @@ class FilterManagement extends Component {
         this.dashboardWindow = (document.getElementById("gooddata") || {}).contentWindow;
     }
 
+    componentWillReceiveProps (nextProps) {
+        this.state = {
+            filters: nextProps.filters
+        };
+    }
+
     onCheck = (label, value, checked) => {
         this.setState( ({filters}) => {
             return {
@@ -52,6 +58,7 @@ class FilterManagement extends Component {
             message.length && this.sendMessage(message);
         }
     };
+
     sendMessage = message => {
         const wrapperMessage = {
             gdc: {
@@ -76,29 +83,28 @@ class FilterManagement extends Component {
     updateFilter = data => {
         !_.isEmpty(data) &&
         this.setState(prevState => {
-            let filters = prevState.filters.map(filter => {
-                let items = filter.items.map(item => {
-                    let isExist = data.find(datum => datum.label === filter.label && datum.value === item.value);
-                    return {
-                        ...item,
-                        checked: !!isExist
-                    }
-                });
-                return {
-                    ...filter,
-                    items
-                };
-            });
-
+            const values = data.map(({value}) => value);
             return {
-                filters
+                filters: prevState.filters.map((filter) => {
+                    let inputFilter = data.find(item => item.label === filter.label);
+                    if (inputFilter) {
+                        return {
+                            ...filter,
+                            items: filter.items.map(item => {
+                                return values.findIndex(value => item.value === value) >= 0  ?
+                                    {...item, checked: true} :
+                                    {...item, checked: false}
+                            })
+                        };
+                    }
+                    return filter;
+                })
             }
         });
     };
 
     render () {
         let filters = this.state.filters;
-
         return(
             <div style={{display: 'flex', flexWrap: 'wrap', flexDirection: 'row'}}>
                 {
