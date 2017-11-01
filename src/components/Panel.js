@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
+import React from 'react';
+import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {white, cyan500} from 'material-ui/styles/colors';
 
 const Panel = ({className = "col-lg col-md col-sm", title, text, children}) => {

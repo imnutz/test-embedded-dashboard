@@ -1,14 +1,14 @@
 
 .row {
-    /*height: 100%;
 
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;*/
+}
+
+.setting-button {
+    margin-left: 8px;
+    margin-bottom: 16px;
 }
 
 .panel {
-    /*height: 100%;*/
     border-radius: 2px;
     border: 1px rgb(0, 188, 212) solid;
 
