@@ -88,6 +88,19 @@ class FilterManagement extends Component {
                 filters: prevState.filters.map((filter) => {
                     let inputFilter = data.find(item => item.label === filter.label);
                     if (inputFilter) {
+
+                        if (inputFilter.value === 'GDC_SELECT_ALL') {
+                            return {
+                                ...filter,
+                                items: filter.items.map(item => {
+                                    return {
+                                        ...item,
+                                        checked: true
+                                    };
+                                })
+                            };
+                        }
+
                         return {
                             ...filter,
                             items: filter.items.map(item => {
