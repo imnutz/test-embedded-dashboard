@@ -40,7 +40,9 @@ export default {
                 {value : 'Short List'},
                 {value : 'Risk Assessment'},
                 {value : 'Conviction'},
+                {value : 'Negotiation'},
                 {value : 'Closed Won'},
+                {value : 'Closed Lost'},
                 {value : 'N/A'}
             ]
         },
