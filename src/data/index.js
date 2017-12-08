@@ -5,6 +5,7 @@ export default {
             title: 'Sale Rep',
             label: 'label.owner.id.name',
             items: [
+                {value : 'GDC_SELECT_ALL'},
                 {value : 'Adam Bradley'},
                 {value : 'Alejandro Vabiano'},
                 {value : 'Alexsandr Fyodr'},
@@ -24,6 +25,7 @@ export default {
             title: 'Activity Type',
             label: 'label.activity.activitytype',
             items: [
+                {value : 'GDC_SELECT_ALL'},
                 {value : 'Email'},
                 {value : 'In Person Meeting'},
                 {value : 'Phone Call'},
@@ -35,6 +37,7 @@ export default {
             title: 'Stage Name',
             label: 'label.stage.name.stagename',
             items: [
+                {value : 'GDC_SELECT_ALL'},
                 {value : 'Interest'},
                 {value : 'Discovery'},
                 {value : 'Short List'},
@@ -50,6 +53,7 @@ export default {
             title: 'Year (Created)',
             label: 'created.aag81lMifn6q',
             items: [
+                {value : 'GDC_SELECT_ALL'},
                 {value : '2007'},
                 {value : '2008'},
                 {value : '2009'},
@@ -63,6 +67,7 @@ export default {
             title: 'Activity',
             label: 'label.activity.id.subject',
             items: [
+                {value : 'GDC_SELECT_ALL'},
                 {value : 'Email with 1000Bulbs.com on Apr-21-08'},
                 {value : 'Email with 1000Bulbs.com on Dec-14-09'},
                 {value : 'Email with 1000Bulbs.com on Dec-29-08'},
